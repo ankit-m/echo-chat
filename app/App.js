@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Friends from './components/Sidebar/Friends';
 
-const App = () => <h1>Hi</h1>;
+const App = () => <div><Friends /></div>;
 
 const mount = document.createElement('div');
 document.body.appendChild(mount);
