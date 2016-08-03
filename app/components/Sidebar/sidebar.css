@@ -1,0 +1,32 @@
+#sidenav-wrapper {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  overflow-y: hidden;
+  background-color: grey;
+}
+
+#content-wrapper {
+  z-index: 0;
+  width: 100%;
+  position: absolute;
+}
+
+#wrapper.menuDisplayed #sidenav-wrapper{
+  width: 250px;
+}
+
+#wrapper.menuDisplayed #content-wrapper{
+  padding-left: 250px;
+}
+
+.sidenav {
+  list-style: none;
+  padding: 0;
+}
+
+.sidenav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
