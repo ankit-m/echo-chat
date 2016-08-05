@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, browserHistory, Route, IndexRoute } from 'react-router';
+import { Router, hashHistory, Route, IndexRoute } from 'react-router';
 import Sidebar from './components/Sidebar/Sidebar';
 import Home from './components/Home/Home';
 import Chatbox from './components/Chatbox/Chatbox';
@@ -10,9 +10,11 @@ import './bootstrap/bootstrap.min.css';
 class App extends React.Component {
   constructor() {
     super();
+    if (localStorage.getItem('friendList') === null) {
+      localStorage.setItem('friendList', '[]');
+    }
     this.state = {
       toggleMenu: false,
-      friends: ['Jack', 'Allen', 'Paul'],
     };
     this.toggleClass = this.toggleClass.bind(this);
   }
@@ -22,7 +24,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="wrapper" className={this.state.toggleMenu ? 'menuDisplayed' : ''}>
-        <Sidebar friends={this.state.friends} />
+        <Sidebar />
         <div id="content-wrapper">
           <div className="container-fluid" style={{ padding: '0' }}>
             {/*<a className="btn btn-primary" onClick={this.toggleClass} id="toggle-menu">Toggle</a>*/}
@@ -38,12 +40,11 @@ const mount = document.createElement('div');
 document.body.appendChild(mount);
 
 ReactDOM.render(
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <Route path="/users" component={Chatbox}>
-        <Route path="/users/:userId" component={Chatbox} />
-      </Route>
-      <IndexRoute component={Chatbox} />
+      <Route path="/users" component={Home} />
+      <Route path="/users/:userId" component={Chatbox} />
+      <IndexRoute component={Home} />
     </Route>
   </Router>,
   mount

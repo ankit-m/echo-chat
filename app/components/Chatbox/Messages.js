@@ -6,11 +6,7 @@ class Messages extends React.Component {
     this.chat.scrollTop = this.chat.scrollHeight;
   }
   render() {
-    let messages = this.props.messages.map(function(message, index) {
-      return (
-        <p key={index}>{message}</p>
-      );
-    });
+    let messages = this.props.messages.map((message, index) => <p key={index}>{message}</p>);
     return <div className="chat" ref={(ref) => this.chat = ref} >{messages}</div>;
   }
 }

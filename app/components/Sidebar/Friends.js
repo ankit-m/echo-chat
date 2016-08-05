@@ -4,9 +4,10 @@ import './sidebar.css';
 
 class Friends extends React.Component {
   render() {
-    const friends = this.props.friendList.map(function(friend, index) {
+    const friends = this.props.friendList.map((friend, index) => {
+      const link = `/users/${index}`;
       return (
-        <li key={index}><Link className="link" to="/users/">{friend}</Link></li>
+        <li key={index}><Link className="link" to={link}>{friend}</Link></li>
       );
     });
     return (
@@ -16,5 +17,9 @@ class Friends extends React.Component {
     );
   }
 }
+
+Friends.propTypes = {
+  friendList: React.PropTypes.array.isRequired,
+};
 
 export default Friends;
