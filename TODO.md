@@ -10,3 +10,4 @@ Echo Chat - To Do
 - [ ] reconnect timeout
 - [x] autoscroll when open chat
 - [ ] dist copy
+- [ ] search

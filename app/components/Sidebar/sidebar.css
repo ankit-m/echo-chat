@@ -27,6 +27,9 @@
   line-height: 40px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 
 .link {
