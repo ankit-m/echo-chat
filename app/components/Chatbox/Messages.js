@@ -1,6 +1,9 @@
 import React from 'react';
 
 class Messages extends React.Component {
+  componentDidMount() {
+    this.chat.scrollTop = this.chat.scrollHeight;
+  }
   componentDidUpdate() {
     this.chat.scrollTop = this.chat.scrollHeight;
   }

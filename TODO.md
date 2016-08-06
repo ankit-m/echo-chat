@@ -7,4 +7,5 @@ Echo Chat - To Do
 - [ ] loading
 - [ ] select a friend page
 - [ ] finish `README.md`
-- [ ] reconnect timeout 
+- [ ] reconnect timeout
+- [x] autoscroll when open chat
