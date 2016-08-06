@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/**/*.js --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,10 @@
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
+    "expect": "^1.20.2",
     "file-loader": "^0.9.0",
+    "mocha": "^3.0.1",
+    "react-addons-test-utils": "^15.3.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
