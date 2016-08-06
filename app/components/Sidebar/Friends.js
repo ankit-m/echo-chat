@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Friends = (props) => {
-  const friends = props.friendList.map((friend, index) => {
-    const link = `/users/${index}`;
+  const friends = Object.keys(props.friendList).map((uid) => {
+    const link = `/users/${uid}`;
     return (
-      <li key={index}>
-        <Link className="link" activeClassName="active-chat" to={link}>{friend}</Link>
+      <li key={uid}>
+        <Link className="link" activeClassName="active-chat" to={link}>
+          {props.friendList[uid].name}
+        </Link>
       </li>
     );
   });
@@ -18,7 +20,7 @@ const Friends = (props) => {
 };
 
 Friends.propTypes = {
-  friendList: React.PropTypes.array.isRequired,
+  friendList: React.PropTypes.object.isRequired,
 };
 
 export default Friends;

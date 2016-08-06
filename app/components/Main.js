@@ -5,7 +5,7 @@ class Main extends React.Component {
   constructor() {
     super();
     if (localStorage.getItem('friendList') === null) {
-      localStorage.setItem('friendList', '[]');
+      localStorage.setItem('friendList', '{}');
     }
   }
   render() {

@@ -2,10 +2,11 @@ Echo Chat - To Do
 =================
 
 - [x] rename chattitle -> chatname
-- [ ] friendList `Array` to `Object` (unique keys)
+- [x] friendList `Array` to `Object` (unique keys)
 - [ ] unit testing
 - [ ] loading
-- [ ] select a friend page
+- [x] select a friend page
 - [ ] finish `README.md`
 - [ ] reconnect timeout
 - [x] autoscroll when open chat
+- [ ] dist copy

@@ -2,6 +2,7 @@ import React from 'react';
 import Title from './Title';
 import Friends from './Friends';
 import AddFriend from './AddFriend';
+import guid from '../../utils/guid';
 import './sidebar.css';
 
 class Sidebar extends React.Component {
@@ -12,9 +13,13 @@ class Sidebar extends React.Component {
   }
   addNewFriend(name) {
     const friendList = JSON.parse(localStorage.getItem('friendList'));
-    friendList.push(name);
+    const id = guid();
+    friendList[id] = {
+      name,
+      image: '',
+    };
     localStorage.setItem('friendList', JSON.stringify(friendList));
-    localStorage.setItem(friendList.length - 1, JSON.stringify({ name, messages: [] }));
+    localStorage.setItem(id, JSON.stringify({ name, messages: [] }));
     this.setState({ friendList });
   }
   render() {
