@@ -17,14 +17,6 @@
   bottom: 20px;
 }
 
-#wrapper.menuDisplayed #sidenav-wrapper{
-  width: 250px;
-}
-
-#wrapper.menuDisplayed #content-wrapper{
-  padding-left: 250px;
-}
-
 .sidenav {
   list-style: none;
   padding: 0;
@@ -47,4 +39,22 @@
   background-color: #e6e6e6;
   text-decoration: none;
   color: black;
+}
+
+.active-chat {
+  text-decoration: none !important;
+  color: black !important;
+  background-color: #e6e6e6;
+}
+
+.sidebar-title {
+  padding: 5px;
+  border-bottom: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.add-friend {
+  position: absolute !important;
+  bottom: 0;
+  width: 100%;
 }

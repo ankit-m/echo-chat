@@ -5,17 +5,30 @@ class AddFriend extends React.Component {
     super();
     this.addFriend = this.addFriend.bind(this);
   }
-  addFriend() {
-    this.props.handler(this.name.value);
-    this.name.value = '';
+  addFriend(e) {
+    const code = e.keyCode ? e.keyCode : e.which;
+    if (code === 13) {
+      this.props.handler(this.name.value);
+      this.name.value = '';
+    }
   }
   render() {
+    const inputStyle = {
+      height: '50px',
+      borderRadius: '0',
+      backgroundColor: '#f8f8f8',
+      border: '0',
+    };
     return (
-      <div className="input-group" style={{ position: 'absolute', bottom: '0', width: '240px' }}>
-        <input type="textarea" className="form-control" ref={(ref) => this.name = ref} />
-        <span className="input-group-btn">
-          <button className="btn btn-danger" onClick={this.addFriend} type="button">Add</button>
-        </span>
+      <div className="input-group add-friend">
+        <input
+          type="text"
+          className="form-control"
+          style={inputStyle}
+          ref={(ref) => this.name = ref}
+          placeholder="Add a friend"
+          onKeyPress={this.addFriend}
+        />
       </div>
     );
   }
