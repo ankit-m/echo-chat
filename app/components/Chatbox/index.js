@@ -69,7 +69,7 @@ class Chatbox extends React.Component {
       return (
         <div>
           <ChatName name={this.state.name} />
-          <span className="text-muted">loading ... </span>
+          <div className="loader"></div>
         </div>
       );
     }
