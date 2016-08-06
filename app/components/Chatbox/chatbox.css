@@ -37,3 +37,8 @@
   border: 0 !important;
   height: 50px !important;
 }
+
+.timestamp {
+  font-size: x-small;
+  line-height: normal;
+}

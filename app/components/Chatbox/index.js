@@ -71,7 +71,10 @@ class Chatbox extends React.Component {
     }
     if (this.state.error) {
       return (
-        <span className="text-muted">error! </span>
+        <div>
+          <ChatTitle title={this.state.name} />
+          <Messages messages={this.state.messages} />
+        </div>
       );
     }
     return (

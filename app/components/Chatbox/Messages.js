@@ -11,7 +11,7 @@ class Messages extends React.Component {
         <div className={obj.type === 0 ? 'message mine' : 'message other'}>
           {obj.message}
           <br />
-          <small className="pull-right">
+          <small className="pull-right timestamp">
             {`${(new Date(obj.timestamp)).getHours()}:${(new Date(obj.timestamp)).getMinutes()}`}
           </small>
         </div>
