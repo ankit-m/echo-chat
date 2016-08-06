@@ -2,6 +2,7 @@ import React from 'react';
 import ChatTitle from './ChatTitle';
 import Messages from './Messages';
 import NewMessage from './NewMessage';
+import './chatbox.css';
 
 class Chatbox extends React.Component {
   constructor(props) {

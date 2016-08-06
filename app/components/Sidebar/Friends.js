@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import './sidebar.css';
 
 const Friends = (props) => {
   const friends = props.friendList.map((friend, index) => {

@@ -1,5 +1,4 @@
 import React from 'react';
-import './chatbox.css';
 
 class NewMessage extends React.Component {
   constructor() {
