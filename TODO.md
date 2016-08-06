@@ -9,5 +9,5 @@ Echo Chat - To Do
 - [ ] finish `README.md`
 - [ ] reconnect timeout
 - [x] autoscroll when open chat
-- [ ] dist copy
+- [x] dist copy
 - [ ] search
