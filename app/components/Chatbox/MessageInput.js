@@ -1,6 +1,6 @@
 import React from 'react';
 
-class NewMessage extends React.Component {
+class MessageInput extends React.Component {
   constructor() {
     super();
     this.sendMessage = this.sendMessage.bind(this);
@@ -25,8 +25,8 @@ class NewMessage extends React.Component {
   }
 }
 
-NewMessage.propTypes = {
+MessageInput.propTypes = {
   handler: React.PropTypes.func.isRequired,
 };
 
-export default NewMessage;
+export default MessageInput;

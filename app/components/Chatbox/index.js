@@ -1,7 +1,7 @@
 import React from 'react';
-import ChatTitle from './ChatTitle';
+import ChatName from './ChatName';
 import Messages from './Messages';
-import NewMessage from './NewMessage';
+import MessageInput from './MessageInput';
 import './chatbox.css';
 
 class Chatbox extends React.Component {
@@ -67,22 +67,25 @@ class Chatbox extends React.Component {
   render() {
     if (this.state.load) {
       return (
-        <span className="text-muted">loading ... </span>
+        <div>
+          <ChatName name={this.state.name} />
+          <span className="text-muted">loading ... </span>
+        </div>
       );
     }
     if (this.state.error) {
       return (
         <div>
-          <ChatTitle title={this.state.name} />
+          <ChatName name={this.state.name} />
           <Messages messages={this.state.messages} />
         </div>
       );
     }
     return (
       <div>
-        <ChatTitle title={this.state.name} />
+        <ChatName name={this.state.name} />
         <Messages messages={this.state.messages} />
-        <NewMessage handler={this.sendMessage} />
+        <MessageInput handler={this.sendMessage} />
       </div>
     );
   }

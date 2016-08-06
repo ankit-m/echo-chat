@@ -1,8 +1,8 @@
 Echo Chat - To Do
 =================
 
-- [ ] rename chattitle -> chatname
-- [ ] friedList `Array` to `Object` (unique keys)
+- [x] rename chattitle -> chatname
+- [ ] friendList `Array` to `Object` (unique keys)
 - [ ] unit testing
 - [ ] loading
 - [ ] select a friend page
