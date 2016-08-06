@@ -6,7 +6,25 @@
   overflow-y: scroll;
 }
 
-.fix-bottom {
-  position: fixed;
-  bottom: 0;
+.message {
+  display: block;
+  line-height: 20px;
+  background-color: pink;
+  border: 1 px solid;
+  border-radius: 12px;
+  padding: 5px 10px 5px 10px;
+  margin: 5px;
+  max-width: 50%;
+  clear: both;
+}
+
+.other {
+  float: right;
+  background-color: #00b0ff;
+  color: white;
+}
+
+.mine {
+  background-color: #eceff1;
+  float: left;
 }
