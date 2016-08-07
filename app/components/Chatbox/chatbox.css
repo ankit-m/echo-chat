@@ -45,7 +45,9 @@
 }
 
 .loader {
+  position: fixed;
   height: 2px;
+  top: 50px;
   width: 80%;
   background-color: #00b0ff;
   animation: prog 1s linear infinite;

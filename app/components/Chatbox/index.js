@@ -2,6 +2,7 @@ import React from 'react';
 import ChatName from './ChatName';
 import Messages from './Messages';
 import MessageInput from './MessageInput';
+import Loader from './Loader';
 import './chatbox.css';
 
 class Chatbox extends React.Component {
@@ -69,7 +70,8 @@ class Chatbox extends React.Component {
       return (
         <div>
           <ChatName name={this.state.name} />
-          <div className="loader"></div>
+          <Loader />
+          <Messages messages={this.state.messages} />
         </div>
       );
     }
