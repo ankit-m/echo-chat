@@ -25,7 +25,7 @@ class Sidebar extends React.Component {
   render() {
     return (
       <div id="sidenav-wrapper">
-        <Title />
+        <Title name="Ankit Muchhala" />
         <Friends friendList={this.state.friendList} />
         <AddFriend handler={this.addNewFriend} />
       </div>
