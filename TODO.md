@@ -3,7 +3,7 @@ Echo Chat - To Do
 
 - [x] rename chattitle -> chatname
 - [x] friendList `Array` to `Object` (unique keys)
-- [x] unit testing
+- [ ] unit testing
 - [x] loading
 - [x] select a friend page
 - [x] finish `README.md`
@@ -13,5 +13,6 @@ Echo Chat - To Do
 - [ ] search
 - [x] edit webpack
 - [x] add errorbar
-- [ ] connection status
+- [x] connection status
 - [ ] messages when internet goes off
+- [ ] handle socket timeouts
