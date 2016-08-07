@@ -23,7 +23,9 @@ class Title extends React.Component {
         </div>
         <div className="media-body">
           <h5 className="media-heading" style={{ margin: '5px 0 0 0' }}><b>Ankit Muchhala</b></h5>
-          <small className="text-muted">{this.state.status}</small>
+          <small className={this.state.status === 'online' ? 'text-muted' : 'text-danger'}>
+            {this.state.status}
+          </small>
         </div>
       </div>
     );
