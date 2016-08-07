@@ -19,7 +19,7 @@ class Chatbox extends React.Component {
     this.setError = this.setError.bind(this);
     window.addEventListener('offline', () => { this.setError(); });
     window.addEventListener('online', () => {
-      setTimeout(() => { this.openSocket(); }, 500);
+      setTimeout(() => { this.openSocket(); }, 500);    // websocket resolution takes time to setup
     });
   }
   componentDidMount() {
@@ -47,6 +47,7 @@ class Chatbox extends React.Component {
     }
   }
   openSocket() {
+    this.setState({ load: true, error: false });
     this.closeSocket();   // close a connection if it exists
     const websocket = new WebSocket('ws://echo.websocket.org/');
     websocket.onopen = () => { this.setState({ load: false, error: false }); };
