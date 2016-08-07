@@ -7,12 +7,12 @@ Echo Chat - To Do
 - [x] loading
 - [x] select a friend page
 - [x] finish `README.md`
-- [ ] reconnect timeout
+- [x] reconnect timeout
 - [x] autoscroll when open chat
 - [x] dist copy
 - [ ] search
 - [x] edit webpack
 - [x] add errorbar
 - [x] connection status
-- [ ] messages when internet goes off
-- [ ] handle socket timeouts
+- [x] messages when internet goes off
+- [x] handle socket timeouts
