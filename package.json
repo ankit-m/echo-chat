@@ -4,7 +4,8 @@
   "description": "A chat application which just repeats what you say. More like an annoying baby. That's pretty much it.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "build": "webpack -p",
+    "start": "webpack-dev-server --content-base dist",
     "test": "mocha --require ignore-styles test/.setup.js test/**/**/*.js --compilers js:babel-core/register"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-react": "^6.11.1",
     "chai": "^3.5.0",
+    "clean-webpack-plugin": "^0.1.10",
     "css-loader": "^0.23.1",
     "enzyme": "^2.4.1",
     "eslint": "^3.2.2",
@@ -45,6 +47,7 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.14.1"
   }
 }

@@ -1,7 +1,9 @@
 import React from 'react';
 
+const chatNameStyle = { borderRadius: '0', margin: '0', borderLeft: '0' };
+
 const ChatName = (props) => (
-  <nav className="navbar navbar-default" style={{ borderRadius: '0', margin: '0' }}>
+  <nav className="navbar navbar-default" style={chatNameStyle}>
     <div className="container-fluid">
       <div className="navbar-header">
         <a className="navbar-brand">

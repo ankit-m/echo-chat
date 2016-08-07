@@ -1,15 +1,23 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Clean = require('clean-webpack-plugin');
+const path = require('path');
+const merge = require('webpack-merge');
+const webpack = require('webpack');
 
-module.exports = {
-  entry: './app/App.js',
+const TARGET = process.env.npm_lifecycle_event;
+const PATHS = {
+  app: path.join(__dirname, 'app'),
+  build: path.join(__dirname, 'dist'),
+};
+
+process.env.BABEL_ENV = TARGET;
+
+const common = {
+  entry: PATHS.app,
   output: {
-    path: './',
+    path: PATHS.build,
     filename: 'bundle.js',
-  },
-  devServer: {
-    inline: true,
-    port: 8080,
   },
   plugins: [
     new HtmlWebpackPlugin({ title: 'Echo Chat', inject: true }),
@@ -26,3 +34,21 @@ module.exports = {
     ],
   },
 };
+
+if (TARGET === 'start') {
+  module.exports = merge(common, {
+    devServer: {
+      inline: true,
+      progress: true,
+      port: 8080,
+    },
+  });
+} else if (TARGET === 'build') {
+  module.exports = merge(common, {
+    plugins: [
+      new Clean([PATHS.build], { verbose: false }),
+      new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }),
+      new webpack.optimize.UglifyJsPlugin({ compress: { warnings: true } }),
+    ],
+  });
+}
