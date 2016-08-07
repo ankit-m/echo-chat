@@ -12,3 +12,6 @@ Echo Chat - To Do
 - [x] dist copy
 - [ ] search
 - [x] edit webpack
+- [x] add errorbar
+- [ ] connection status
+- [ ] messages when internet goes off

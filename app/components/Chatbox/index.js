@@ -3,6 +3,7 @@ import ChatName from './ChatName';
 import Messages from './Messages';
 import MessageInput from './MessageInput';
 import Loader from './Loader';
+import Errorbar from './Errorbar';
 import './chatbox.css';
 
 class Chatbox extends React.Component {
@@ -80,6 +81,7 @@ class Chatbox extends React.Component {
         <div>
           <ChatName name={this.state.name} />
           <Messages messages={this.state.messages} />
+          <Errorbar />
         </div>
       );
     }
