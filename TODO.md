@@ -16,3 +16,4 @@ Echo Chat - To Do
 - [x] connection status
 - [x] messages when internet goes off
 - [x] handle socket timeouts
+- [ ] add folder structure in readme

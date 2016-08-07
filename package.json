@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack -p",
     "start": "webpack-dev-server --content-base dist",
-    "test": "mocha --require ignore-styles test/.setup.js test/**/**/*.js --compilers js:babel-core/register"
+    "test": "mocha --require ignore-styles test/.setup.js test/**/**/*.js --compilers js:babel-core/register",
+    "lint": "./node_modules/.bin/eslint app"
   },
   "repository": {
     "type": "git",
