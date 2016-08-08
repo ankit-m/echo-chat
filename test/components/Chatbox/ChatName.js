@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import ChatName from '../../../app/components/Chatbox/ChatName';
 
 describe('ChatName', () => {
@@ -10,5 +10,7 @@ describe('ChatName', () => {
       .to.equal(true);
   });
   it('have a nav element', () => {
+    const wrapper = render(<ChatName name="test" />);
+    expect(wrapper.find('.navbar').length).to.equal(1);
   });
 });

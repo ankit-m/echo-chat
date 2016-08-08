@@ -45,6 +45,7 @@
     "jsdom": "^9.4.1",
     "mocha": "^3.0.1",
     "react-addons-test-utils": "^15.3.0",
+    "sinon": "^1.17.5",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",

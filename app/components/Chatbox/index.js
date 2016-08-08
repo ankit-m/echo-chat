@@ -19,7 +19,7 @@ class Chatbox extends React.Component {
     this.setError = this.setError.bind(this);
     window.addEventListener('offline', () => { this.setError(); });
     window.addEventListener('online', () => {
-      setTimeout(() => { this.openSocket(); }, 500);    // websocket resolution takes time to setup
+      setTimeout(() => { this.openSocket(); }, 1000);    // websocket resolution takes time to setup
     });
   }
   componentDidMount() {
