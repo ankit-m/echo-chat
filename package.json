@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack -p",
     "start": "webpack-dev-server --content-base dist",
-    "test": "mocha --require ignore-styles test/.setup.js test/**/**/*.js --compilers js:babel-core/register",
+    "test": "mocha --require ignore-styles --require mock-local-storage test/.setup.js --recursive test --compilers js:babel-core/register",
     "lint": "./node_modules/.bin/eslint app"
   },
   "repository": {
@@ -44,6 +44,7 @@
     "ignore-styles": "^4.0.0",
     "jsdom": "^9.4.1",
     "mocha": "^3.0.1",
+    "mock-local-storage": "^1.0.2",
     "react-addons-test-utils": "^15.3.0",
     "sinon": "^1.17.5",
     "style-loader": "^0.13.1",

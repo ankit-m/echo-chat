@@ -12,12 +12,12 @@ describe('AddFriend', () => {
     expect(wrapper.find('input').length).to.equal(1);
     expect(wrapper.find('.add-friend').length).to.equal(1);
   });
-  it('it should call addFriend for text input', () => {
+  it('should call addFriend for text input', () => {
     input.get(0).value = 'check';
     input.simulate('keyPress', { keyCode: 13 });
     expect(addFriend.called).to.equal(true);
   });
-  it('it should not call addFriend for blank input', () => {
+  it('should not call addFriend for blank input', () => {
     addFriend.reset();
     input.get(0).value = '   ';
     input.simulate('keyPress', { keyCode: 13 });

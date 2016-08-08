@@ -9,7 +9,7 @@ describe('ChatName', () => {
       .contains(<a className="navbar-brand">test</a>))
       .to.equal(true);
   });
-  it('have a nav element', () => {
+  it('should have a nav element', () => {
     const wrapper = render(<ChatName name="test" />);
     expect(wrapper.find('.navbar').length).to.equal(1);
   });
