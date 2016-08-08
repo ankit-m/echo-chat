@@ -7,7 +7,7 @@ class AddFriend extends React.Component {
   }
   addFriend(e) {
     const code = e.keyCode ? e.keyCode : e.which;
-    if (code === 13) {
+    if (code === 13 && !/^\s*$/.test(this.name.value)) {
       this.props.handler(this.name.value);
       this.name.value = '';
     }
