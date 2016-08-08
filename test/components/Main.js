@@ -1,22 +1,26 @@
 import React from 'react';
 import { expect } from 'chai';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import Main from '../../app/components/Main';
 
 describe('Main', () => {
   beforeEach(() => {
     localStorage.clear();
   });
+  const node = <div>test</div>;
+  it('should render a child when passed to it', () => {
+    const wrapper = shallow(<Main>{node}</Main>);
+    expect(wrapper.contains(node)).to.eql(true);
+  });
   it('should set localStorage if it is empty', () => {
-    mount(<Main children={[]} />);
+    mount(<Main>{node}</Main>);
     expect(localStorage).to.deep.equal({ friendList: '{}' });
   });
+  const wrapper = mount(<Main>{node}</Main>);
   it('should render Sidebar', () => {
-    const wrapper = mount(<Main children={[]} />);
     expect(wrapper.find('Sidebar').length).to.equal(1);
   });
   it('should render content-wrapper', () => {
-    const wrapper = mount(<Main children={[]} />);
     expect(wrapper.find('#content-wrapper').length).to.equal(1);
   });
 });
