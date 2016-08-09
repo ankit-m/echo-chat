@@ -7,6 +7,12 @@ A chat application which just repeats what you say. More like an annoying baby. 
 
 Clone the project and run `npm install`.
 
+### Architecture
+
+The app contains two main components - Sidebar and Chatbox. Both of these communicate with the localStorage (which acts as a local database). They communicate via routeParams (`userId`). The database contains one key `friendList` - an object which contains the details (`name` and `image`) of all the friends along with their unique key (`GUID`). The other objects in the database have this GUID as their key and contain message information for each friend (`{ name, messages (Array) }`).
+
+The `components` folder contains all the React components. The components which have subcomponents are in a folder. The `index.js` in each folder refers the the topmost component.
+
 ### Dependencies
 
 You need to have node (> **4.4.3**) and npm (> **3.10.5**) installed.
@@ -31,18 +37,25 @@ You need to have node (> **4.4.3**) and npm (> **3.10.5**) installed.
 
 ### Running the App
 
-`npm start`
-
+```bash
+npm start
+```
 This will start the app on `localhost:8080`
 
 ### Running the tests
 
-`npm test`.
+```bash
+npm test
+```
 
 ### Build
 
-`npm run build`
+```bash
+npm run build
+```
 
 ### Lint
 
-`npm run lint`
+```bash
+npm run lint
+```
