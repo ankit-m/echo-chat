@@ -13,18 +13,11 @@ class AddFriend extends React.Component {
     }
   }
   render() {
-    const inputStyle = {
-      height: '50px',
-      borderRadius: '0',
-      backgroundColor: '#f8f8f8',
-      border: '0',
-    };
     return (
       <div className="input-group add-friend">
         <input
           type="text"
-          className="form-control"
-          style={inputStyle}
+          className="form-control add-friend-input"
           ref={(ref) => this.name = ref}
           placeholder="Add a friend"
           onKeyPress={this.addFriend}

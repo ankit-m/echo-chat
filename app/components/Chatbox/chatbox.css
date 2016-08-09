@@ -34,8 +34,13 @@
   bottom: 0;
   width: calc(100% - 250px) !important;
   border-radius: 0 !important;
-  border: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
   height: 50px !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .timestamp {

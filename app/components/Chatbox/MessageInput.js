@@ -20,6 +20,7 @@ class MessageInput extends React.Component {
         placeholder="Say Hi!"
         ref={(ref) => this.message = ref}
         onKeyPress={this.sendMessage}
+        autoFocus
       />
     );
   }

@@ -61,3 +61,15 @@
   bottom: 0;
   width: 100%;
 }
+
+.add-friend-input {
+  background-color: #f8f8f8 !important;
+  border-radius: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  height: 49px !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}

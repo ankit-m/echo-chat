@@ -19,7 +19,7 @@ class Title extends React.Component {
     return (
       <div className="media sidebar-title">
         <div className="media-left">
-          <img className="media-object img-circle" width="40px" height="40px" src="http://lorempixel.com/200/200/" alt="..." />
+          <img className="media-object img-circle" width="40px" height="40px" src="http://dummyimage.com/40" alt="profile" />
         </div>
         <div className="media-body">
           <h5 className="media-heading" style={{ margin: '5px 0 0 0' }}>
